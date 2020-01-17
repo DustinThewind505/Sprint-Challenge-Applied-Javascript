@@ -15,7 +15,12 @@ axios
     response.data.topics.forEach(item => {
       topicsContainer.appendChild(createTab(item));
     });
+  })
+  .catch(error => {
+    console.log("The data was not returned", error);
   });
+
+  
 
 const topicsContainer = document.querySelector('.topics');
 
